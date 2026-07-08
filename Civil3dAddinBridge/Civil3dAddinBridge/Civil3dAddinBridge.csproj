@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<PlatformTarget>x64</PlatformTarget>
+		<Prefer32Bit>false</Prefer32Bit>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWindowsForms>true</UseWindowsForms>
+		<!-- MessageBox 사용을 위해 필요 -->
+		<AssemblyName>JH_CadAddinManager_SmokeTest</AssemblyName>
+	</PropertyGroup>
+
+	<!--
+    핵심: 이 프로젝트엔 IExtensionApplication이 없습니다.
+    순수 [CommandMethod]/[LispFunction]만 있는, 공식 매뉴얼이 상정하는
+    "가벼운 테스트 dll" 형태입니다. 이걸 CadAddinManager에 Add하면
+    리본이 전혀 안 딸려오는 걸 직접 확인할 수 있습니다.
+  -->
+
+	<PropertyGroup>
+		<Civil3DInstallDir Condition="'$(Civil3DInstallDir)'==''">C:\Program Files\Autodesk\AutoCAD 2025</Civil3DInstallDir>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="accoremgd">
+			<HintPath>$(Civil3DInstallDir)\accoremgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="acdbmgd">
+			<HintPath>$(Civil3DInstallDir)\acdbmgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="acmgd">
+			<HintPath>$(Civil3DInstallDir)\acmgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+
+		<!--
+      Civil3D 전용 API(AeccDbMgd)까지 테스트하고 싶으시면 아래 주석을 해제하세요.
+      경로는 실제 설치 구조에 맞게 확인 필요 (보통 AutoCAD 설치 폴더 하위 C3D 폴더).
+    -->
+		<!--
+    <Reference Include="AeccDbMgd">
+      <HintPath>$(Civil3DInstallDir)\C3D\AeccDbMgd.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    -->
+	</ItemGroup>
+
+	<!--
+    원래 파일에 있던 COMReference(GUID 215d64d2-...)는 제가 드린 코드와 무관하고
+    출처가 불분명해서 제외했습니다. Excel Interop이 필요하시면 기존
+    SmartInfraDevJH.csproj에 있던 Microsoft.Office.Interop.Excel COMReference를
+    그대로 가져와서 쓰시면 됩니다. 만약 이 GUID가 의도적으로 추가하신 다른
+    참조라면 알려주세요 - 다시 넣어드리겠습니다.
+  -->
+
+</Project>

@@ -1,0 +1,12 @@
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\bin\Debug\net8.0-windows\JH_CadAddinManager_SmokeTest.deps.json
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\bin\Debug\net8.0-windows\JH_CadAddinManager_SmokeTest.dll
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\bin\Debug\net8.0-windows\JH_CadAddinManager_SmokeTest.pdb
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\Civil3dAddinBridge.csproj.AssemblyReference.cache
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\Civil3dAddinBridge.GeneratedMSBuildEditorConfig.editorconfig
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\Civil3dAddinBridge.AssemblyInfoInputs.cache
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\Civil3dAddinBridge.AssemblyInfo.cs
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\Civil3dAddinBridge.csproj.CoreCompileInputs.cache
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\JH_CadAddinManager_SmokeTest.dll
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\refint\JH_CadAddinManager_SmokeTest.dll
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\JH_CadAddinManager_SmokeTest.pdb
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge\Civil3dAddinBridge\obj\Debug\net8.0-windows\ref\JH_CadAddinManager_SmokeTest.dll

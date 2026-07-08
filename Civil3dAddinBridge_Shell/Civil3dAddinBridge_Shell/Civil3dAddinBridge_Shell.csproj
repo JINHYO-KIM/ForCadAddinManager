@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Platforms>x64</Platforms>
+		<PlatformTarget>x64</PlatformTarget>
+		<Prefer32Bit>false</Prefer32Bit>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<AssemblyName>Civil3dAddinBridge_Shell</AssemblyName>
+	</PropertyGroup>
+
+	<!--
+    주의: 이 프로젝트를 기존 솔루션에 "새 프로젝트로 추가"할 때,
+    Configuration Manager에서 이 프로젝트의 플랫폼이 x64로 잡혀 있는지
+    반드시 확인할 것 (지난번 "does not exist for that project" 에러 재발 방지).
+    <Platforms>x64</Platforms>를 명시해뒀지만, 솔루션 차원의 매핑은
+    Visual Studio가 자동으로 맞춰주지 않는 경우가 있다.
+  -->
+
+	<PropertyGroup>
+		<Civil3DInstallDir Condition="'$(Civil3DInstallDir)'==''">C:\Program Files\Autodesk\AutoCAD 2025</Civil3DInstallDir>
+	</PropertyGroup>
+
+	<!-- Civil3dAddinBridge.dll(Core)을 컴파일 타임에 참조하지 않는다 (의도적).
+       Core의 커맨드는 SendStringToExecute로 이름만 부르면 되므로 타입 참조가 필요 없다. -->
+	<ItemGroup>
+		<Reference Include="accoremgd">
+			<HintPath>$(Civil3DInstallDir)\accoremgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="acdbmgd">
+			<HintPath>$(Civil3DInstallDir)\acdbmgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="acmgd">
+			<HintPath>$(Civil3DInstallDir)\acmgd.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+		<Reference Include="AdWindows">
+			<HintPath>$(Civil3DInstallDir)\AdWindows.dll</HintPath>
+			<Private>false</Private>
+		</Reference>
+	</ItemGroup>
+
+</Project>

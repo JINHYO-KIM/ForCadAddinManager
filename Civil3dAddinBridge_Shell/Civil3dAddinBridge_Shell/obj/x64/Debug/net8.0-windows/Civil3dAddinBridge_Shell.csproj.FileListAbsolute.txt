@@ -1,0 +1,12 @@
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\bin\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.deps.json
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\bin\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.dll
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\bin\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.pdb
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.csproj.AssemblyReference.cache
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.GeneratedMSBuildEditorConfig.editorconfig
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.AssemblyInfoInputs.cache
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.AssemblyInfo.cs
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.csproj.CoreCompileInputs.cache
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.dll
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\refint\Civil3dAddinBridge_Shell.dll
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\Civil3dAddinBridge_Shell.pdb
+C:\Civil3D\Civil3dAddinBridge\Civil3dAddinBridge_Shell\Civil3dAddinBridge_Shell\obj\x64\Debug\net8.0-windows\ref\Civil3dAddinBridge_Shell.dll
