@@ -1,3 +1,9 @@
+## Background
+
+This all started from a very specific, very annoying problem: whenever Civil3D was open and I tried to build the project in Visual Studio, the build would fail because the output DLL was locked by the running Civil3D process. Every code change meant closing Civil3D, rebuilding, and reopening it just to test one small tweak.
+
+What follows is the result of working through that problem properly — not just patching around the file lock, but rethinking the whole setup so that testing and deployment could both be a little more comfortable. The Core/Shell split and the workflow described below are the outcome of that effort.
+
 ## Acknowledgments
 
 Huge thanks to **chuongmep**, the author of [CadAddinManager](https://github.com/chuongmep/CadAddinManager), for building a tool that fundamentally changed how fast we could develop this project.
@@ -38,6 +44,26 @@ By having the Shell load Core at runtime via `Assembly.LoadFrom` instead of a co
 
 **3. Fast, restart-free iteration and stable deployment aren't in tension**
 We went in assuming we'd have to trade one for the other. It turned out that once you split things correctly, stable deployment falls out naturally from the same structure that makes fast iteration possible.
+
+---
+
+## Usage
+
+### During development (fast iteration, no restart)
+
+1. Build the **Core** project only (`SmartInfraDevJH.Core.dll`) — this is the assembly with all the `[CommandMethod]` logic and no ribbon.
+2. Open CadAddinManager inside Civil3D and **Add** `SmartInfraDevJH.Core.dll`.
+3. Double-click any command in the tree to run it.
+4. Change the code, rebuild, and use **Faceless** to re-run without touching Civil3D or CadAddinManager again.
+5. Civil3D itself never needs to be closed during this loop.
+
+### Deploying for actual use (ribbon UI)
+
+1. Build both projects: `SmartInfraDevJH.Core.dll` (logic) and `SmartInfraDevJH.dll` (Shell, ribbon).
+2. **Copy both DLLs into the same folder.** This is required — the Shell loads Core at runtime from its own folder, so they have to sit side by side.
+3. Register only the Shell assembly (`SmartInfraDevJH.dll`) as the add-in to auto-load with Civil3D (via bundle/manifest, or NETLOAD for a quick check).
+4. On startup, the Shell automatically loads Core from the same folder, builds the ribbon, and wires the buttons to the commands inside Core.
+5. Users just click the ribbon buttons as usual — they never need to know Core and Shell are separate files.
 
 ---
 
